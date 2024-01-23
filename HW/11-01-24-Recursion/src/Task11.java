@@ -10,12 +10,13 @@ public class Task11 {
     public static void main(String[] args) {
         knight(1, 1);
     }
+    static int gridSize = 8;
     public static void knight(int x, int y) {
-        if (x > 8 || x <= 0 || y > 8 || y <= 0) {
+        if (x > gridSize || x <= 0 || y > gridSize || y <= 0) {
             System.out.println("No such coordinate");
             return;
         }
-        boolean[][] passedSquares = new boolean[8][8];
+        boolean[][] passedSquares = new boolean[gridSize][gridSize];
         List<int[]> start = new ArrayList<>(List.of(new int[]{x, y}));
         List<int[]> result = move(x, y, start, passedSquares);
         if (result != null) {
@@ -27,14 +28,14 @@ public class Task11 {
         }
     }
     static List<int[]> move(int x, int y, List<int[]> madeMoves, boolean[][] passedSquares) {
-        if (madeMoves.size() == 64) {
+        if (madeMoves.size() == gridSize*gridSize) {
             return madeMoves;
         }
 
         List<int[]> savedMoves = new ArrayList<>(madeMoves);
-        boolean[][] savedSquares = new boolean[8][8];
+        boolean[][] savedSquares = new boolean[gridSize][gridSize];
         for (int i = 0; i < passedSquares.length; i ++) {
-            savedSquares[i] = Arrays.copyOf(passedSquares[i], 8);
+            savedSquares[i] = Arrays.copyOf(passedSquares[i], gridSize);
         }
 
         int[][] possibleMoves = {{1, 2}, {2, 1}, {2, -1}, {1, -2}, {-1, -2}, {-2, -1}, {-2, 1}, {-1, 2}};
@@ -60,7 +61,7 @@ public class Task11 {
         return null;
     }
     static boolean possibleMove(int newX, int newY, boolean[][] passedSquares) {
-        boolean invalidSquare = newX > 8 || newX <= 0 || newY > 8 || newY <= 0;
+        boolean invalidSquare = newX > gridSize || newX <= 0 || newY > gridSize || newY <= 0;
         return !invalidSquare && !passedSquares[newX - 1][newY - 1];
     }
 }

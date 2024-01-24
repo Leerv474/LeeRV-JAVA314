@@ -1,5 +1,9 @@
+import interfaces.DbDaoMock;
 public class Main {
+
+
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        DbDaoMock dao = new DbDaoMock();
+        for (int i = 0; i < dao.users.length; i++);
     }
 }

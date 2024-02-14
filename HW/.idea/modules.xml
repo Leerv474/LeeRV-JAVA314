@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/11-01-24-Recursion/11-01-24-Recursion.iml" filepath="$PROJECT_DIR$/11-01-24-Recursion/11-01-24-Recursion.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/HW.iml" filepath="$PROJECT_DIR$/.idea/HW.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_01-02-24-OOP-Practice/_01-02-24-OOP-Practice.iml" filepath="$PROJECT_DIR$/_01-02-24-OOP-Practice/_01-02-24-OOP-Practice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_01.02.24-Inheritance/_01.02.24-Inheritance.iml" filepath="$PROJECT_DIR$/_01.02.24-Inheritance/_01.02.24-Inheritance.iml" />
+    </modules>
+  </component>
+</project>

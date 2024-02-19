@@ -7,9 +7,10 @@ public class Task11 {
     //      клетки поля и поставить туда коня. Задача программы – най-
     //      ти методом перебора путь коня, при котором он обойдет все
     //      клетки доски, становясь в каждую клетку только один раз.
-    public static void main(String[] args) {
+    public static void main(String[] args) { 
         knight(1, 1);
     }
+
     static int gridSize = 8;
     public static void knight(int x, int y) {
         if (x > gridSize || x <= 0 || y > gridSize || y <= 0) {

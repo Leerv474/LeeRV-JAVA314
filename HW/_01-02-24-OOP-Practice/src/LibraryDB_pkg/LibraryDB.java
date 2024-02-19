@@ -3,12 +3,12 @@ package LibraryDB_pkg;
 import java.util.Objects;
 
 public class LibraryDB {
-    Book[] ownedBooks = new Book[1000];
-    int amountOfBooks = 0;
+    private Book[] ownedBooks = new Book[1000];
+    private int amountOfBooks = 0;
 
     private int getBookId(String bookName, EBookState state) {
         for (int i = 0; i < this.amountOfBooks; i++) {
-            boolean bookIsStored = Objects.equals(this.ownedBooks[i].getName(), bookName) && this.ownedBooks[i].getState() == state;
+            boolean bookIsStored = this.ownedBooks[i].getName().equals(bookName) && this.ownedBooks[i].getState() == state;
             if (bookIsStored) {
                 return i;
             }
@@ -37,7 +37,6 @@ public class LibraryDB {
             System.out.println("No such book was borrowed.");
             return;
         }
-
         this.ownedBooks[bookId].registerReturn();
     }
 

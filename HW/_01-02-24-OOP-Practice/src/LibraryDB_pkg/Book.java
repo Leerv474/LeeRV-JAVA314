@@ -27,7 +27,7 @@ public class Book {
     }
 
     void registerBorrow(String borrower) {
-        if (this.state == EBookState.WRITTEN_OFF) {
+        if (this.state == EBookState.WRITTEN_OFF || this.state == EBookState.BORROWED) {
             System.out.println("The book has been retired.");
             return;
         }

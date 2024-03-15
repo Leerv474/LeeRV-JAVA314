@@ -5,6 +5,11 @@ public class Robot {
     private int currentX = 0;
     private int currentY = 0;
 
+    public Robot(int x, int y, Direction direction) {
+        this.currentX = x;
+        this.currentY = y;
+        this.direction = direction;
+    }
     public Direction getDirection() {
         return direction;
     }

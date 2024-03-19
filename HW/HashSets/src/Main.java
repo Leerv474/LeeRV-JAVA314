@@ -4,10 +4,10 @@ import java.util.HashSet;
 public class Main {
     public static void main(String[] args) {
         int[] numbers = new int[]{1, 2, 3, 4 ,8};
-        int targetSum = 7;
-        System.out.println(Arrays.toString(findTargetSumNumbers(numbers, targetSum)));
-    }
+        int trgtSm=  7;
 
+
+        System.out.println(Arrays.toString(f
 
     public static int[] findTargetSumNumbers(int[] numbers, int targetSum) {
         HashSet<Integer> storage = new HashSet<>();
@@ -28,3 +28,9 @@ public class Main {
         return null;
     }
 }
+
+
+    
+
+
+    

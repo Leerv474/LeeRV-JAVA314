@@ -1,13 +1,23 @@
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class Main {
     public static void main(String[] args) {
-        task1();
-        task2();
-        task4();
+//        task1();
+//        task2();
+//        task5();
+//        task4();
+        task6();
     }
 
     //TODO:     1. Фильтрация и сборка:
@@ -67,19 +77,41 @@ public class Main {
     //        ◦ Отсортируйте его по убыванию.
     //        ◦ Найдите первые 3 элемента после сортировки.
     public static void task4() {
-        List<Integer> numbers = new ArrayList<>();
-        numbers.add(123);
-        numbers.add(789);
-        numbers.add(321);
-        numbers.add(654);
-        numbers.add(987);
-        numbers.add(234);
-        numbers.add(567);
-        numbers.add(890);
-        numbers.add(432);
-        numbers.add(765);
-
+        List<Integer> numbers = Arrays.asList(123, 789, 456, 321, 654, 987, 234, 567, 890);
         List<Integer> sortedNumbers = numbers.stream().sorted(Comparator.reverseOrder()).toList();
         sortedNumbers.stream().limit(3).forEach(System.out::println);
+    }
+
+    //TODO:     5. Обработка данных из файла:
+    //        ◦ Прочитайте содержимое текстового файла в список строк.
+    //        ◦ Используя Stream, отфильтруйте только те строки, которые содержат определенное слово.
+    //        ◦ Подсчитайте количество строк, соответствующих условию.
+    public static void task5() {
+        List<String> linesList = new ArrayList<>();
+        try(Stream<String> lines = Files.lines(Path.of("data/data.txt"))) {
+            linesList = lines.toList();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        String certainWord = "of";
+        linesList.stream().filter(line -> line.contains("of")).forEach(System.out::println);
+    }
+
+    //TODO:     6. Параллельная обработка:
+    //        ◦ Создайте список чисел от 1 до 1000.
+    //        ◦ Используя параллельный поток, найдите сумму квадратов всех чисел.
+    //        ◦ Сравните время выполнения с обычным потоком.
+    public static void task6() {
+        ArrayList<Integer> numbers = new ArrayList<>((ArrayList<Integer>) IntStream.range(1, 1_000_000).boxed().toList());
+        long start = System.currentTimeMillis();
+        ArrayList<Integer> squares = (ArrayList<Integer>) numbers.parallelStream().map(num -> num*num).toList();
+        long end = System.currentTimeMillis();
+        System.out.println(end - start);
+
+        start = System.currentTimeMillis();
+        squares = (ArrayList<Integer>) numbers.stream().map(num -> num * num).toList();
+        end = System.currentTimeMillis();
+        System.out.println(end - start);
+
     }
 }

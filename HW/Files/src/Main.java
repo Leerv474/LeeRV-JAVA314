@@ -2,7 +2,6 @@ import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 import java.nio.file.Path;
@@ -10,8 +9,8 @@ import java.nio.file.Path;
 public class Main {
     public static void main(String[] args) {
 //        task1();
-//        task2();
-        task3();
+        task2();
+//        task3();
 
     }
 
@@ -70,15 +69,23 @@ public class Main {
         System.out.println("New word:");
         String newWord = scanner.next();
         Path path = Path.of(enteredPath);
+        String newContents = "";
         try {
             String contents = new String(Files.readAllBytes(path));
             int wordOccurrences = (contents.length() - contents.replaceAll(wordToChange, "").length()) / wordToChange.length();
-            String newContents = contents.replaceAll(wordToChange, newWord);
+            newContents = contents.replaceAll(wordToChange, newWord);
 
             System.out.println(newContents);
             System.out.printf("replaced %d times", wordOccurrences);
         } catch (IOException e) {
             System.out.println("failed to read file");
+        }
+        try {
+            FileWriter writer = new FileWriter(enteredPath);
+            writer.write(newContents);
+            writer.close();
+        } catch (IOException e)  {
+            System.out.println("failed to write file");
         }
     }
 

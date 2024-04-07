@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"<Unnamed>","c":"Calculator","l":"Calculator()","u":"%3Cinit%3E()"},{"p":"<Unnamed>","c":"Calculator","l":"divide(double, double)","u":"divide(double,double)"},{"p":"<Unnamed>","c":"Calculator","l":"OPERATIONS_COUNT"}];updateSearchResults();

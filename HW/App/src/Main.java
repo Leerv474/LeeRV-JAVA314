@@ -19,7 +19,7 @@ public class Main {
         String userInfo = "Администратор Администратор";
         String currentDate = "Сегодня " + date;
 
-        Font font = new Font("Arial", Font.PLAIN, 18);
+        Font font = new Font("Arial", Font.PLAIN, 20);
         JLabel helloLabel = new JLabel(helloInfo);
         helloLabel.setFont(font);
 
@@ -61,21 +61,18 @@ public class Main {
         JTextField dataField = new JTextField(10);
         JButton addButton = new JButton("Add Data");
 
-        addButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                String name = nameField.getText();
-                int data = Integer.parseInt(dataField.getText());
+        addButton.addActionListener(e -> {
+            String name = nameField.getText();
+            int data = Integer.parseInt(dataField.getText());
 
-                Users.addData(name, data);
+            Users.addData(name, data);
 
-                DefaultTableModel userModel = (DefaultTableModel) userTable.getModel();
-                userModel.addRow(new Object[]{name});
+            DefaultTableModel userModel = (DefaultTableModel) userTable.getModel();
+            userModel.addRow(new Object[]{name});
 
-                nameField.setText("");
-                dataField.setText("");
-                Users.saveData();
-            }
+            nameField.setText("");
+            dataField.setText("");
+            Users.saveData();
         });
         tableFrame.setLayout(new BorderLayout());
         JPanel panel = new JPanel(new GridLayout(1, 2));

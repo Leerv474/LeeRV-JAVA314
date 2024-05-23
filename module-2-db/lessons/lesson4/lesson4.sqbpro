@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="/home/roman/Documents/LeeRV-JAVA314/module-2-db/lessons/lesson4.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="1072"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,8:mainproducts"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="SQL 1">
+CREATE TABLE if not exists products
+(
+
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+
+    name TEXT NOT NULL,
+
+    company TEXT NOT NULL,
+
+    product_count INTEGER DEFAULT 0,
+
+    price INTEGER
+
+);
+
+INSERT INTO products ( name, company, product_count, price)
+
+VALUES
+
+('iPhone 13', 'Apple', 3, 76000),
+
+('iPhone 12', 'Apple', 3, 51000),
+
+('Galaxy S21', 'Samsung', 2, 56000),
+
+('Galaxy S20', 'Samsung', 1, 41000),
+
+('P40 Pro', 'Huawei', 5, 36000);
+ 
+INSERT INTO products ( name, company, product_count, price)
+
+VALUES
+
+('Nokia XR20', 'HMD Global', 2, 45000),
+
+('T11 Pro', 'Xiaomi', 1, 54000);
+
+SELECT * FROM products;
+
+SELECT company FROM products;
+
+SELECT name, price FROM products;
+ 
+SELECT * FROM products
+
+WHERE company IN ('Samsung', 'Huawei',  'Xiaomi');
+ 
+SELECT * FROM products
+
+WHERE company NOT IN ('Samsung', 'Huawei',  'Xiaomi');
+
+
+
+SELECT * FROM products
+
+WHERE price BETWEEN 20000 AND 50000;
+ 
+SELECT * FROM products
+
+WHERE price NOT BETWEEN 20000 AND 50000;
+ 
+SELECT * FROM products
+
+WHERE  product_count * price BETWEEN 90000 AND 150000;
+ 
+
+
+SELECT * FROM products
+
+WHERE name LIKE 'iPhone___';
+ 
+SELECT * FROM products
+
+WHERE name LIKE '_Phone_%';
+ 
+
+
+SELECT * FROM products
+
+WHERE name GLOB '*Phone?';
+ 
+SELECT * FROM products
+WHERE name GLOB 'iPhone 1[012]'; 
+
+SELECT * FROM products
+WHERE name GLOB 'iPhone 1[6-12]';
+
+select * from products order by company asc, name desc;
+
+select * from products limit 3;
+select * from products limit 2, 3;
+
+select avg(price) from products where company='Samsung';
+
+select min(price) as min_price, max(price) as max_price from products;
+ </sql><current_tab id="0"/></tab_sql></sqlb_project>

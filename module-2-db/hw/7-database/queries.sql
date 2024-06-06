@@ -1,0 +1,248 @@
+-- create table curators(
+--     id int AUTO_INCREMENT not null primary key,
+--     name varchar(255) not null check(length(name) > 0),
+--     surname varchar(255) not null check(length(surname) > 0)
+-- );
+--
+-- create table faculties(
+--     id int AUTO_INCREMENT not null primary key,
+--     name varchar(100) not null check(length(name) > 0),
+--     unique(name)
+-- );
+-- create table departments(
+--     id int AUTO_INCREMENT not null primary key,
+--     building int not null check(building >= 1 and building <= 5),
+--     financing decimal not null default 0,
+--     name varchar(100) not null,
+--     unique(name),
+--     faculty_id int not null,
+--     FOREIGN KEY(faculty_id) REFERENCES faculties(id),
+--     constraint financing_check check(financing >= 0),
+--     constraint name_check check(length(name) > 0)
+-- );
+
+-- create table groups(
+--     id int AUTO_INCREMENT not null primary key,
+--     name varchar(10) not null,
+--     unique(name),
+--     year int not null,
+--     department_id int not null,
+--     FOREIGN KEY(department_id) REFERENCES departments(id),
+--     constraint year_check check(year >= 0 and year <= 5)
+-- );
+--
+-- create table subjects(
+--     id int AUTO_INCREMENT not null primary key,
+--     name varchar(100) not null check(length(name) > 0),
+--     unique(name)
+-- );
+--
+-- create table teachers(
+--     id int AUTO_INCREMENT not null primary key,
+--     is_professor bit not null default 0,
+--     name varchar(255) not null check(length(name) > 0),
+--     surname varchar(255) not null check(length(surname) > 0),
+--     salary decimal not null check(salary > 0)
+--     
+-- );
+-- create table lectures(
+--     id int AUTO_INCREMENT not null primary key,
+--     lecture_date date not null,
+--     subject_id int not null,
+--     teacher_id int not null,
+--     FOREIGN KEY(subject_id) REFERENCES subjects(id),
+--     FOREIGN KEY(teacher_id) REFERENCES teachers(id)
+-- );
+--
+-- create table groups_curators(
+--     id int AUTO_INCREMENT not null primary key,
+--     group_id int not null,
+--     lecture_id int not null,
+--     FOREIGN KEY(group_id) REFERENCES groups(id),
+--     FOREIGN KEY(lecture_id) REFERENCES lectures(id)
+-- );
+--
+-- create table students(
+--     id int AUTO_INCREMENT not null primary key,
+--     name varchar(255) not null check(length(name) > 0),
+--     surname varchar(255) not null check(length(surname) > 0),
+--     rating int not null check(rating >= 1 and rating <= 5)
+-- );
+--
+-- create table groups_students(
+--     id int AUTO_INCREMENT not null primary key,
+--     group_id int not null,
+--     student_id int not null,
+--     FOREIGN KEY(group_id) REFERENCES groups(id),
+--     FOREIGN KEY(student_id) REFERENCES students(id)
+-- );
+--
+-- create table groups_lectures(
+--     id int AUTO_INCREMENT not null primary key,
+--     group_id int not null,
+--     lecture_id int not null,
+--     FOREIGN KEY(group_id) REFERENCES groups(id),
+--     FOREIGN KEY(lecture_id) REFERENCES lectures(id)
+-- );
+--
+-- -- Insert data into curators
+-- INSERT INTO curators (name, surname) VALUES
+-- ('John', 'Doe'),
+-- ('Jane', 'Smith'),
+-- ('Alice', 'Johnson'),
+-- ('Bob', 'Brown');
+--
+-- -- Insert data into faculties
+-- INSERT INTO faculties (name) VALUES
+-- ('Engineering'),
+-- ('Arts'),
+-- ('Science'),
+-- ('Business');
+--
+-- -- Insert data into departments
+-- INSERT INTO departments (building, financing, name, faculty_id) VALUES
+-- (1, 100000, 'Computer Science', 1),
+-- (2, 150000, 'Electrical Engineering', 1),
+-- (3, 200000, 'Mechanical Engineering', 1),
+-- (4, 120000, 'Fine Arts', 2),
+-- (5, 110000, 'Physics', 3);
+--
+-- -- Insert data into groups
+-- INSERT INTO groups (name, year, department_id) VALUES
+-- ('CS101', 1, 1),
+-- ('CS201', 2, 1),
+-- ('EE101', 1, 2),
+-- ('ME101', 1, 3),
+-- ('FA101', 1, 4);
+--
+-- -- Insert data into subjects
+-- INSERT INTO subjects (name) VALUES
+-- ('Mathematics'),
+-- ('Physics'),
+-- ('Chemistry'),
+-- ('History'),
+-- ('Computer Science');
+--
+-- -- Insert data into teachers
+-- INSERT INTO teachers (is_professor, name, surname, salary) VALUES
+-- (b'1', 'Albert', 'Einstein', 100000),
+-- (b'0', 'Isaac', 'Newton', 80000),
+-- (b'1', 'Marie', 'Curie', 90000),
+-- (b'0', 'Nikola', 'Tesla', 85000);
+--
+-- -- Insert data into lectures
+-- INSERT INTO lectures (lecture_date, subject_id, teacher_id) VALUES
+-- ('2024-06-01', 1, 1),
+-- ('2024-06-02', 2, 2),
+-- ('2024-06-03', 3, 3),
+-- ('2024-06-04', 4, 4),
+-- ('2024-06-05', 5, 1);
+--
+-- -- Insert data into groups_curators
+-- INSERT INTO groups_curators (group_id, lecture_id) VALUES
+-- (1, 1),
+-- (2, 2),
+-- (3, 3),
+-- (4, 4),
+-- (5, 5);
+--
+-- -- Insert data into students
+-- INSERT INTO students (name, surname, rating) VALUES
+-- ('Emily', 'Davis', 4),
+-- ('Michael', 'Wilson', 5),
+-- ('Sarah', 'Taylor', 3),
+-- ('David', 'Moore', 2),
+-- ('Laura', 'Anderson', 1);
+--
+-- -- Insert data into groups_students
+-- INSERT INTO groups_students (group_id, student_id) VALUES
+-- (1, 1),
+-- (1, 2),
+-- (2, 3),
+-- (3, 4),
+-- (4, 5);
+--
+-- -- Insert data into groups_lectures
+-- INSERT INTO groups_lectures (group_id, lecture_id) VALUES
+-- (1, 1),
+-- (2, 2),
+-- (3, 3),
+-- (4, 4),
+-- (5, 5);
+
+---- 1
+-- SELECT building FROM departments group by building having sum(financing) > 100000;
+
+---- 2
+-- SELECT name as group_name FROM groups WHERE year = 5 and department_id = (SELECT id FROM departments WHERE name = 'Computer Science') and 
+--     (SELECT count(*) FROM groups_lectures WHERE id = group_id) > 10;
+
+---- 3
+-- SELECT g.name AS group_name
+-- FROM groups g
+-- JOIN groups_students gs ON g.id = gs.group_id
+-- JOIN students s ON gs.student_id = s.id
+-- GROUP BY g.id
+-- having AVG(s.rating) > (SELECT AVG(s2.rating) FROM groups g2
+--     JOIN groups_students gs2 ON g2.id = gs2.group_id
+--     JOIN students s2 ON gs2.student_id = s2.id
+--     WHERE g2.name = 'EE101');
+
+----4
+-- SELECT surname, name FROM teachers WHERE salary > (SELECT avg(salary) FROM teachers WHERE is_professor = 1);
+
+---- 5
+-- SELECT g.name AS group_name
+-- FROM groups g
+-- JOIN groups_curators gc ON g.id = gc.group_id
+-- GROUP BY g.id, g.name
+-- HAVING COUNT(gc.id) > 1;
+
+---- 6
+-- SELECT g.name AS group_name
+-- FROM groups g
+-- JOIN groups_students gs ON g.id = gs.group_id
+-- JOIN students s ON gs.student_id = s.id
+-- GROUP BY g.id
+-- having AVG(s.rating) < (SELECT MIN(s2.rating) FROM groups g2
+--     JOIN groups_students gs2 ON g2.id = gs2.group_id
+--     JOIN students s2 ON gs2.student_id = s2.id
+--     WHERE g2.year = 5);
+
+---- 7
+-- select f.name as faculty_name 
+-- from faculties f
+-- join departments d on f.id = d.faculty_id
+-- group by f.id, f.name
+-- having sum(d.financing) > (select sum(financing) from departments where name = 'Computer Science');
+
+-- --8
+-- SELECT s.name AS subject_name, CONCAT(t.name, ' ', t.surname) AS teacher_name
+-- FROM subjects s
+-- JOIN (
+--     SELECT subject_id, teacher_id, COUNT(*) AS lecture_count
+--     FROM lectures
+--     GROUP BY subject_id, teacher_id
+-- ) AS lecture_counts ON s.id = lecture_counts.subject_id
+-- JOIN teachers t ON lecture_counts.teacher_id = t.id
+-- GROUP BY s.id, s.name
+-- HAVING COUNT(*) = MAX(lecture_count);
+
+-- -- 9
+-- select s.name as subject 
+-- from subjects s
+-- join (select subject_id, count(*) as lecture_count 
+--     from lectures
+--     group by subject_id
+--     order by count(*) asc 
+--     limit 1
+-- ) as min_lecture_count on s.id = min_lecture_count.subject_id;
+
+-- -- 10
+-- select count(gs.student_id), count(s.id) 
+-- from groups g
+-- join groups_students gs on gs.group_id = g.id
+-- join groups_lectures gl on gl.group_id = g.id
+-- join lectures l on l.id = gl.lecture_id
+-- join subjects s on s.id = l.subject_id
+-- where g.department_id = (select id from departments where name = 'Computer Science');

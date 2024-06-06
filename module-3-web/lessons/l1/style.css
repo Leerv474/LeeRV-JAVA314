@@ -1,0 +1,39 @@
+*{
+/* these are commonly used in every project */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    background-color: pink;
+    /* margin: 10px 0; */
+    margin-top: 10px;
+    padding: 20px;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 16pt;
+}
+
+h1, h3, h5{
+    text-align: center;
+}
+
+h2, h4, h6{
+    text-align: right;
+}
+
+sup{
+    color: blue;
+}
+
+sub{
+    color: green;
+}
+
+.span_1{
+    color: red;
+    text-transform: uppercase;
+    font-style: italic;
+    text-decoration: underline;
+}

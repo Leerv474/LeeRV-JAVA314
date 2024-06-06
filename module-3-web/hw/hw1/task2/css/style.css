@@ -1,0 +1,56 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: #404040;
+  background-color: #e9e9e9;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+hr{
+  margin: 20px;
+  color: lightgray;
+}
+
+h1{
+  text-align: center;
+  margin: 20px;
+}
+
+.header_note{
+  text-align: right;
+  font-style: italic;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+.header_note_translation{
+  font-size: 10pt;
+  font-style: normal;
+}
+
+p{
+  margin: 20px;
+}
+
+.sentence_1{
+  opacity: 100%;
+}
+.sentence_2{
+  opacity: 85%;
+}
+.sentence_3{
+  opacity: 70%;
+}
+.sentence_4{
+  opacity: 55%;
+}
+.sentence_5{
+  opacity: 40%;
+}
+.sentence_6{
+  opacity: 25%;
+}
+.sentence_7{
+  opacity: 10%;
+}

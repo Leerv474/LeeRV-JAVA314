@@ -1,0 +1,68 @@
+* {
+  margin: 0px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+sections {
+  padding: 20px 50px;
+}
+
+ul,
+ol {
+  padding-left: 30px;
+}
+
+.list_one ul {
+  font-size: 14pt;
+  color: brown;
+  font-weight: bold;
+  text-transform: uppercase;
+  list-style-type: upper-roman;
+}
+
+.list_two ol {
+  list-style-type: decimal-leading-zero;
+}
+
+.list_two span {
+  color: blue;
+}
+
+.list_two li {
+  line-height: 2em;
+  display: inline-block;
+  margin-left: 30px;
+}
+
+.list_two li:hover {
+  cursor: pointer;
+}
+
+.list_two li:hover span {
+  color: red;
+}
+
+.list_two_1 il{
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+.list_three .ol_1{
+  list-style-type: decimal-leading-zero;
+}
+
+.list_three .ul_2{
+  list-style-type: upper-alpha;
+}
+
+.list_three .ul_3{
+  list-style-type: disc;
+}
+
+.list_three .ul_3 span {
+  color: palevioletred;
+}

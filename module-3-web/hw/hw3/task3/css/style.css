@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.contents {
+  padding: 10px;
+  background-color: lightgray;
+}
+.contents ul {
+  margin: 20px;
+}
+
+.contents li {
+  margin: 20px;
+  background-color: green;
+  list-style-type: none;
+}
+.contents ul li h2 {
+  padding: 20px;
+  background-color: darkgreen;
+  color: white;
+}
+
+.contents ul li p {
+  padding: 20px;
+  color: white;
+}
+
+.contents ul li p sup {
+  color: pink;
+}
+
+.footer {
+  background-color: lightgray;
+}
+
+.footer ul {
+  margin: 0 50px;
+  list-style: none;
+  counter-reset: custom-counter;
+}
+
+.footer ul li {
+  padding: 10px 40px;
+  counter-increment: custom-counter;
+  position: relative;
+}
+
+.footer ul li::before {
+  content: "[" counter(custom-counter) "]";
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}

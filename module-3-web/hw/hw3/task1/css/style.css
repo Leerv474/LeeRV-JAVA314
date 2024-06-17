@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h3 {
+  margin: 20px;
+}
+
+div {
+  background-color: lightgray;
+}
+.list {
+  list-style: none;
+}
+
+.list .list-item {
+  margin: 0 40px;
+  background: url('../arrow.png') no-repeat left;
+  background-position: 0 0;
+  background-size: 20px 20px;
+  padding-left: 30px;
+  line-height: 20px;
+}
+
+.sub-list {
+  list-style: none;
+}
+
+.sub-list-winter li {
+  margin: 0 10px;
+  background: url('../ice-star.png') no-repeat left;
+  background-position: 0 0;
+  background-size: 20px 20px;
+  padding-left: 30px;
+  line-height: 20px;
+}
+
+.sub-list-spring li {
+  margin: 0 10px;
+  background: url('../tulip.png') no-repeat left;
+  background-position: 0 0;
+  background-size: 20px 20px;
+  padding-left: 30px;
+  line-height: 20px;
+}
+
+.sub-list-summer li {
+  margin: 0 10px;
+  background: url('../watermelon.png') no-repeat left;
+  background-position: 0 0;
+  background-size: 20px 20px;
+  padding-left: 30px;
+  line-height: 20px;
+}
+
+.sub-list-autumn li {
+  margin: 0 10px;
+  background: url('../mapleleaf.png') no-repeat left;
+  background-position: 0 0;
+  background-size: 20px 20px;
+  padding-left: 30px;
+  line-height: 20px;
+}

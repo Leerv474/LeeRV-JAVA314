@@ -1,0 +1,29 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 10px;
+  background-color: lightgray;
+}
+
+ul {
+  padding: 0 30px;
+}
+.level-one li {
+  list-style-type: upper-roman;
+}
+
+.level-two li {
+  list-style-type: decimal;
+}
+
+.level-three li {
+  list-style-type: lower-latin;
+}
+
+h4 {
+  margin: 10px 0;
+}

@@ -1,0 +1,32 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.ex1 ul {
+  list-style-type: decimal;
+}
+
+.ex1 ul li {
+  line-height: 2em;
+}
+
+.ex1 ul li a{
+  color: black;
+  text-decoration: none;
+}
+
+.ex1 ul li a:hover{
+  color: blue;
+}
+
+.ex1 p{
+  text-align: justify;
+  text-indent: 1.5em;
+  line-height: 1.5em;
+}
+
+.ex1 {
+  margin-bottom: 300px;
+}

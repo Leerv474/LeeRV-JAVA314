@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div{
+  border-radius: 5px;
+}
+table {
+  border-collapse: collapse;
+}
+
+
+th {
+  background-color: rgba(09,06,51, 1);
+  color: white;
+  padding: 5px 20px;
+}
+
+tr:nth-child(2) {
+  font-size: 2em;
+}
+
+tr:nth-child(2) th {
+  padding-top: 20px;
+}
+
+td {
+  padding: 10px;
+  text-align: center;
+}
+td:first-child {
+  text-align: left;
+}
+
+tr td:nth-child(odd) {
+  background-color: rgba(200, 200, 200, 0.3);
+}
+
+tr:nth-child(even) td{
+  background-color: rgba(200, 200, 200, 0.5);
+}
+
+tr:nth-child(even) td:nth-child(odd) {
+  background-color: rgba(200, 200, 200, 0.7);
+}
+
+button {
+  background-color: rgba(200, 200, 200, 1);
+  color: gray;
+  font-weight: bold;
+  border: 2px solid gray;
+  padding: 10px 20px;
+}
+
+tr:nth-child(1) th:nth-child(1){
+  background-color: rgba(09,06,51, 0.7);
+}
+
+tr:nth-child(1) th:nth-child(2), 
+th:nth-child(1){
+  background-color: rgba(09,06,51, 0.75);
+}
+
+tr:nth-child(1) th:nth-child(3), 
+th:nth-child(2){
+  background-color: rgba(09,06,51, 0.8);
+}
+
+tr:nth-child(1) th:nth-child(4), 
+th:nth-child(3){
+  background-color: rgba(09,06,51, 0.85);
+}
+
+tr:first-child th:first-of-type {
+  border-top-left-radius: 10px;
+}
+tr:first-child th:last-of-type {
+  border-top-right-radius: 10px;
+}
+tr:last-of-type td:first-of-type {
+  border-bottom-left-radius: 10px;
+}
+tr:last-of-type td:last-of-type {
+  border-bottom-right-radius: 10px;
+}

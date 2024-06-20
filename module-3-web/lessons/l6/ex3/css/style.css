@@ -1,0 +1,78 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  display: flex;
+  margin: 30px;
+}
+
+section .text {
+  width: 60%;
+}
+
+section .text p {
+  margin: 10px 0;
+}
+
+.box-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 20px;
+}
+
+.box-container .action-box, 
+.box-container .plans-box
+{
+  background: darkblue;
+  border-radius: 20px;
+  height: max-content;
+  width: max-content;
+}
+
+.box-container .action-box p,
+.box-container .plans-box p {
+  color: blue;
+  background: lightblue;
+  padding: 10px 20px;
+  margin: 2px 0;
+  width: 300px;
+}
+
+
+.box-container .action-box p:last-child,
+.box-container .plans-box p:last-child {
+  border-radius: 0 0 20px 20px;
+  margin: 0
+}
+
+
+.box-container .action-box h4, 
+.box-container .plans-box h4
+{
+  color: white;
+  background: darkblue;
+  padding: 10px 20px;
+  border-radius: 20px 20px 0 0;
+}
+
+@media screen and (max-width: 800px) {
+  section {
+    flex-direction: column;
+  }
+  .box-container {
+    flex-direction: row;
+  }
+  section .text {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .box-container {
+    flex-direction: column;
+  }
+}

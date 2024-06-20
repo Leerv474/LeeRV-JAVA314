@@ -1,0 +1,50 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+section {
+  display: flex;
+}
+
+section .menu-box {
+}
+
+section .menu-box ul {
+  list-style-type: none;
+}
+
+section .menu-box ul li {
+  background: darkgray;
+  text-align: center;
+  width: 100px;
+  padding: 20px;
+}
+
+section .menu-box ul li:first-child {
+  background: gray;
+}
+
+section .info-box {
+  background: gray;
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+}
+
+section .info-box .title-box .picture {
+  background: lightgray;
+  height: 220px;
+  width: 350px;
+}
+
+section .info-box .title-box {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  gap: 20px;
+}
+
+

@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  height: 100vh;
+  background: #0a3d01;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 50px;
+}
+.container {
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 16pt;
+}
+
+img {
+  width: 80px;
+}
+
+.box div p:nth-child(1) {
+  color: gray;
+}
+
+.box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+@media screen and (max-width: 600px) {
+  .box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  section{
+    padding: 60px;
+    font-size: 13pt;
+  };
+}
+
+.title {
+  font-size: 20pt;
+  color: white;
+}
+
+.path {
+  color: gray;
+}

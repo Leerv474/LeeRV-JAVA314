@@ -1,0 +1,60 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 20px;
+}
+
+.user {
+  display: flex;
+  width: 80%;
+  box-shadow: 0 0 10px 3px darkgray;
+  padding: 20px;
+  align-items: center;
+}
+
+.user .info {
+  align-items: center;
+  width: 40%;
+}
+
+
+.user .ppicture {
+  width: 20%;
+}
+
+.user .info .date img,
+.user .info .location img {
+  width: 20px; 
+  padding: 2px;
+  opacity: 80%;
+}
+
+.user .info .date,
+.user .info .location {
+  display: flex;
+  padding: 2px;
+  align-items: center;
+  color: gray;
+}
+
+.user .info .name {
+  font-weight: bold;
+  font-size: 14pt;
+}
+
+.user .actions {
+  width: 20%;
+  margin-left: auto;
+}
+
+.user .actions a {
+  display: block;
+  text-decoration: none;
+}

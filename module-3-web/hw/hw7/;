@@ -1,0 +1,35 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.title {
+  background: darkorange;
+  color: white;
+  width: 500px;
+  padding: 10px 15px;
+  font-weight: bold;
+  position: sticky;
+  top: 80px;
+  left: 30px;
+}
+
+.card {
+  background: #aae2d5;
+  margin: 10px 10px 10px 50px;
+  padding: 80px 40px 60px 40px;
+  border-radius: 10px;
+}
+
+.card p {
+  margin: 5px;
+  color: #58726c;
+}
+
+.card input {
+  font-size: 14pt;
+  padding: 5px;
+  background: #aae2d5;
+}
+

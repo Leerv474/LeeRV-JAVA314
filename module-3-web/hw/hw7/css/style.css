@@ -1,0 +1,76 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.title {
+  background: darkorange;
+  color: white;
+  width: 500px;
+  padding: 10px 15px;
+  font-weight: bold;
+  position: sticky;
+  top: 80px;
+  left: 30px;
+}
+
+.card {
+  background: #aae2d5;
+  margin: 10px 10px 10px 50px;
+  padding: 80px 40px 60px 40px;
+  border-radius: 10px;
+  width: 800px;
+}
+
+.card p {
+  margin: 5px;
+  color: #58726c;
+}
+
+.card input {
+  font-size: 14pt;
+  padding: 5px;
+  background: #c0ede5;
+  border:  none;
+  border-bottom: 2px solid #58726c;
+  width: 440px;
+  margin-bottom: 10px;
+}
+
+.card .card-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  width: 440px;
+
+}
+
+.card .card-info input {
+  width: 140px;
+}
+
+.card .card-info .expiry {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.card .card-info .expiry-month {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.card .card-info .expiry-year {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.card .card-info .cvv {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.card .card-info .cvv-input {
+  grid-column: 3;
+  grid-row: 2;
+}

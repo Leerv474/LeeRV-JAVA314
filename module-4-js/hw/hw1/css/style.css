@@ -1,0 +1,11 @@
+div {
+  border: 1px solid black;
+  display: flex;
+  padding: 30px;
+}
+
+div button {
+  margin: 10px;
+  width: 100px;
+  margin-left: auto;
+}

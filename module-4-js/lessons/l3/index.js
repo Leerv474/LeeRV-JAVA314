@@ -42,11 +42,11 @@ but_one.onclick = () => {
   }
 };
 
-
 const equation = document.getElementById("equation");
 equation.onclick = () => {
   let answer = 0;
   do {
     answer = Number(prompt("what is 2 + 2 * 2?"));
   } while (answer != 6);
-}
+};
+

@@ -1,16 +1,16 @@
 $(document).ready(function () {
   let flag = true;
 
-  $(".icon img").on(function () {
+  $(".icon img").click(function () {
     console.log('worked');
     if (flag) {
       $(".links").css({
-        left: "35px",
+        top: "0px",
         transition: "3s ease", // 'z-index': 1,
       });
     } else {
       $(".links").css({
-        left: "-550px",
+        top: "-320px",
         transition: "5s ease",
       });
     }

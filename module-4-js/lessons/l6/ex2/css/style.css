@@ -4,13 +4,14 @@
  
 .links {
     display: flex;
-    /* flex-direction: column; */
+     flex-direction: column; 
     gap: 10px;
     position: absolute;
-    top: 0;
-    left: -550px;
+    top: -320px;
+    left: 0px;
     background-color: rgba(194, 106, 106, 0.557);
     width: max-content;
+    margin-left: 40px;
 }
  
 .link_menu {

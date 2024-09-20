@@ -1,14 +1,13 @@
-package com.top.sampleRest;
+package com.top.DivisionPractice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.util.UUID;
-
 @SpringBootApplication
-public class SampleRestApplication {
+public class DivisionPracticeApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SampleRestApplication.class, args);
+		SpringApplication.run(DivisionPracticeApplication.class, args);
 	}
+
 }

@@ -12,7 +12,7 @@ http://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean id="passwordSizeValidator" class="org.top.springdemo.util.PasswordSizeValidatorImpl">
         <property name="passwordSize" value="7"/>
     </bean>
-    <bean id="emailValidator" class="org.top.springdemo.util.EmailValidatorImpl">
+    <bean id="emailValidator" class="org.top.springdemo.util.EmailValidatorImp">
         <property name="validationPattern" value=".+@.+"/>
     </bean>
     <bean id="accountRegisterValidator" class="org.top.springdemo.util.AccountRegisterValidatorImpl">

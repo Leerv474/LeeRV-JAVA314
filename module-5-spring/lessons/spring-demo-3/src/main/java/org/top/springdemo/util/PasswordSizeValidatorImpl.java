@@ -1,9 +1,7 @@
 package org.top.springdemo.util;
 
-import lombok.Builder;
 import lombok.Setter;
 
-@Builder
 public class PasswordSizeValidatorImpl implements PasswordValidator{
     @Setter
     private int passwordSize;

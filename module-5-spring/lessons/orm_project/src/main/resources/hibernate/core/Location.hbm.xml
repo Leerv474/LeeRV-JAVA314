@@ -1,0 +1,14 @@
+<hibernate-mapping package="org.example.orm_project.hibernate.model">
+    <class name="Location" table="locations">
+        <id name="id">
+            <generator class="identity"/>
+        </id>
+        <discriminator column="discriminator" type="string"/>
+        <property name="name"/>
+
+        <!-- Many-to-one relationship with Branch -->
+        <many-to-one name="branch" class="org.example.orm_project.hibernate.model.Branch" fetch="select">
+            <column name="branch_id" not-null="true"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

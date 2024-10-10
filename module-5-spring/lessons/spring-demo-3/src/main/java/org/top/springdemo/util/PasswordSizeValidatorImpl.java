@@ -1,10 +1,16 @@
 package org.top.springdemo.util;
 
-import lombok.Setter;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
+@Component(value = "passwordSizeValidator")
 public class PasswordSizeValidatorImpl implements PasswordValidator{
-    @Setter
     private int passwordSize;
+
+    @Value(value = "${passwordSizeValidator.passwordSize}")
+    public void setPasswordSize(int passwordSize) {
+        this.passwordSize = passwordSize;
+    }
 
     @Override
     public boolean validate(String password) {

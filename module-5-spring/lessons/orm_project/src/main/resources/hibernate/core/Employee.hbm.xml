@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?><!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.example.orm_project.hibernate.model">
+    <class name="Employee" table="employees">
+        <id name="id">
+            <generator class="identity"/>
+        </id>
+        <discriminator column="discriminator" type="string"/>
+        <property name="firstName"/>
+        <property name="lastName"/>
+
+        <bag name="branches" table="employee_branch">
+            <key>
+                <column name="employee_id" not-null="true"/>
+            </key>
+            <many-to-many entity-name="org.example.orm_project.hibernate.model.Branch">
+                <column name="branch_id" not-null="true"/>
+            </many-to-many>
+        </bag>
+    </class>
+</hibernate-mapping>

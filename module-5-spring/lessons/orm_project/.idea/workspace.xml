@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cfb29136-7bc2-4126-822f-490bf63ae617" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../hw/ShopCatalog/src/main/java/org/top/ShopCatalog/controller/ApplicationConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/orm_project/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/orm_project/hibernate/model/Branch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/orm_project/hibernate/model/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/orm_project/hibernate/model/Location.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/orm_project/jpa/models/Branch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/orm_project/jpa/models/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/orm_project/jpa/models/Location.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/orm_project/jpa/repository/BranchRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/orm_project/jpa/repository/BranchRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/orm_project/jpa/repository/EmployeeRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/orm_project/jpa/repository/EmployeesRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/orm_project/jpa/repository/LocationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/orm_project/jpa/repository/LocationRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/orm_project/spring/config/JpaConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/orm_project/spring/models/Branch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/orm_project/spring/models/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/orm_project/spring/models/Location.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/orm_project/spring/repositories/BranchRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/orm_project/spring/repositories/BranchRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/orm_project/spring/repositories/EmployeeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/orm_project/spring/repositories/EmployeeRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/orm_project/spring/repositories/LocationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/maven/archetype.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/archetype-resources/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/archetype-resources/src/main/java/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/archetype-resources/src/test/java/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/hibernate/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/hibernate/core/Branch.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/hibernate/core/Employee.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/hibernate/core/Location.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/hibernate/core/hibernate.cfg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/hibernate/hibernate.cfg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-demo-3/src/main/java/org/top/springdemo/config/ApplicationConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-demo-3/src/main/java/org/top/springdemo/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-demo-3/src/main/java/org/top/springdemo/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-demo-3/src/main/java/org/top/springdemo/dao/AccountsDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-demo-3/src/main/java/org/top/springdemo/dao/AccountsDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-demo-3/src/main/java/org/top/springdemo/service/RegisterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-demo-3/src/main/java/org/top/springdemo/service/RegisterService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-demo-3/src/main/java/org/top/springdemo/util/AccountRegisterValidatorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-demo-3/src/main/java/org/top/springdemo/util/AccountRegisterValidatorImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-demo-3/src/main/java/org/top/springdemo/util/EmailValidatorImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-demo-3/src/main/java/org/top/springdemo/util/EmailValidatorImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-demo-3/src/main/java/org/top/springdemo/util/PasswordSizeValidatorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-demo-3/src/main/java/org/top/springdemo/util/PasswordSizeValidatorImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-demo-3/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-demo-3/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-demo-3/src/main/resources/context.xml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2mqQpujfeYv9aqQbVrj2GRElPGS" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/roman/Documents/LeeRV-JAVA314/module-5-spring/lessons/orm_project/src/main/java/org/example/orm_project/spring",
+    "settings.editor.selected.configurable": "com.maddyhome.idea.vim.ui.VimEmulationConfigurable"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/org/example/orm_project/spring" />
+      <recent name="$PROJECT_DIR$/src/main/java/org/example/orm_project/jpa/models" />
+      <recent name="$PROJECT_DIR$/src/main/resources/hibernate/core" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/hibernate/core" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cfb29136-7bc2-4126-822f-490bf63ae617" name="Changes" comment="" />
+      <created>1719135083856</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1719135083856</updated>
+    </task>
+    <servers />
+  </component>
+</project>

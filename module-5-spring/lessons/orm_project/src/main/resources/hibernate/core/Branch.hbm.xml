@@ -1,0 +1,16 @@
+<hibernate-mapping package="org.example.orm_project.hibernate.model">
+    <class name="Branch" table="branches">
+        <id name="id">
+            <generator class="identity"/>
+        </id>
+        <discriminator column="discriminator" type="string"/>
+        <property name="name"/>
+
+        <bag name="locations" inverse="true" cascade="all">
+            <key>
+                <column name="branch_id"/>
+            </key>
+            <one-to-many class="org.example.orm_project.hibernate.model.Location"/>
+        </bag>
+    </class>
+</hibernate-mapping>
